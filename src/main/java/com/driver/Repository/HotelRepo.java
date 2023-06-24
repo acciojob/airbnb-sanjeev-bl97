@@ -31,10 +31,14 @@ public class HotelRepo {
         int max = Integer.MIN_VALUE;
 
         for(Hotel hotel : hotelMap.values()){
-            if(hotel.getFacilities().size() > max){
+            if(hotel.getFacilities().size() > max ||
+                    (hotel.getFacilities().size() == max && ans != null && ans.compareTo(hotel.getHotelName()) > 1)
+            )
+            {
                 max = hotel.getFacilities().size();
                 ans = hotel.getHotelName();
             }
+
         }
 
         return ans;
