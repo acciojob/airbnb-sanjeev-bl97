@@ -28,7 +28,7 @@ public class HotelRepo {
     }
     public String getHotelWithMostFacilities() {
         String ans = "";
-        int max = 1;
+        int max = 0;
 
         for(Hotel hotel : hotelMap.values()){
             if(hotel.getFacilities().size() > max ||
