@@ -50,7 +50,7 @@ public class HotelRepo {
         bookingMap.put(uuid.toString(),booking);
 
 
-        List<Booking> userBookings = userBookingsMap.get(booking.getBookingPersonName());
+        List<Booking> userBookings = userBookingsMap.get(booking.getBookingAadharCard());
 
         if(userBookings == null)
             userBookings = new ArrayList<>();
