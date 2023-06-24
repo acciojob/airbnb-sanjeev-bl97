@@ -32,7 +32,7 @@ public class HotelRepo {
 
         for(Hotel hotel : hotelMap.values()){
             if(hotel.getFacilities().size() > max ||
-                    (hotel.getFacilities().size() == max && ans != null && ans.compareTo(hotel.getHotelName()) > 1)
+                    (hotel.getFacilities().size() == max && ans != null && ans.compareTo(hotel.getHotelName()) > 0)
             )
             {
                 max = hotel.getFacilities().size();
